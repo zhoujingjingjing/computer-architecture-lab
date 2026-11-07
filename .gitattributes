@@ -20,3 +20,8 @@
 /ETH-CA/pdf/onur-comparch-fall2025-lecture7-memory-dataretention-and-refresh-afterlecture.pdf filter=lfs diff=lfs merge=lfs -text
 /ETH-CA/pdf/onur-comparch-fall2025-lecture9a-memorylatency-ii-afterlecture.pdf filter=lfs diff=lfs merge=lfs -text
 /ETH-CA/pdf/onur-comparch-fall2025-lecture9b-memorycontrollers-afterlecture.pdf filter=lfs diff=lfs merge=lfs -text
+COEN4730/hw4_files/linux-parsec-2-1-m5-with-test-inputs.img.bz2 filter=lfs diff=lfs merge=lfs -text
+COEN4730/hw4_files/m5_system_2.0b3.tar.bz2 filter=lfs diff=lfs merge=lfs -text
+COEN4730/hw4_files/vmlinux_2.6.27-gcc_4.3.4 filter=lfs diff=lfs merge=lfs -text
+COEN4730/hw6_files/aarch-system-2014-10.tar.xz filter=lfs diff=lfs merge=lfs -text
+COEN4730/hw6_files/alphaev67-unknown-linux-gnu.tar.bz2 filter=lfs diff=lfs merge=lfs -text

@@ -1,0 +1,5 @@
+erosion.o: erosion.c ffos.h
+ffos.o: ffos.c ffos.h
+main.o: main.c m5op.h ffos.h
+otsu.o: otsu.c ffos.h
+utils.o: utils.c

@@ -1,0 +1,2032 @@
+{
+    "name": null, 
+    "sim_quantum": 0, 
+    "system": {
+        "have_virtualization": false, 
+        "phys_addr_range_64": 40, 
+        "highest_el_is_64": false, 
+        "bridge": {
+            "slave": {
+                "peer": "system.membus.master[0]", 
+                "role": "SLAVE"
+            }, 
+            "name": "bridge", 
+            "req_size": 16, 
+            "delay": 5.0000000000000004e-08, 
+            "eventq_index": 0, 
+            "master": {
+                "peer": "system.iobus.slave[0]", 
+                "role": "MASTER"
+            }, 
+            "cxx_class": "Bridge", 
+            "path": "system.bridge", 
+            "resp_size": 16, 
+            "type": "Bridge"
+        }, 
+        "have_generic_timer": false, 
+        "clk_domain": {
+            "name": "clk_domain", 
+            "clock": 1e-09, 
+            "eventq_index": 0, 
+            "cxx_class": "SrcClockDomain", 
+            "path": "system.clk_domain", 
+            "type": "SrcClockDomain"
+        }, 
+        "have_lpae": false, 
+        "cxx_class": "LinuxArmSystem", 
+        "load_offset": 0, 
+        "vncserver": {
+            "name": "vncserver", 
+            "number": 0, 
+            "frame_capture": false, 
+            "eventq_index": 0, 
+            "cxx_class": "VncServer", 
+            "path": "system.vncserver", 
+            "type": "VncServer", 
+            "port": 5900
+        }, 
+        "multi_proc": true, 
+        "early_kernel_symbols": false, 
+        "panic_on_oops": false, 
+        "work_end_ckpt_count": 0, 
+        "enable_context_switch_stats_dump": false, 
+        "work_begin_ckpt_count": 0, 
+        "have_large_asid_64": false, 
+        "realview": {
+            "mmc_fake": {
+                "name": "mmc_fake", 
+                "pio": {
+                    "peer": "system.iobus.master[22]", 
+                    "role": "SLAVE"
+                }, 
+                "amba_id": 0, 
+                "ignore_access": false, 
+                "pio_latency": 1.0000000000000001e-07, 
+                "eventq_index": 0, 
+                "cxx_class": "AmbaFake", 
+                "path": "system.realview.mmc_fake", 
+                "pio_addr": 268455936, 
+                "type": "AmbaFake"
+            }, 
+            "rtc": {
+                "name": "rtc", 
+                "int_delay": 1.0000000000000001e-07, 
+                "pio": {
+                    "peer": "system.iobus.master[23]", 
+                    "role": "SLAVE"
+                }, 
+                "amba_id": 3412017, 
+                "time": "Thu Jan  1 00:00:00 2009", 
+                "pio_latency": 1.0000000000000001e-07, 
+                "int_num": 42, 
+                "eventq_index": 0, 
+                "cxx_class": "PL031", 
+                "path": "system.realview.rtc", 
+                "pio_addr": 268529664, 
+                "type": "PL031"
+            }, 
+            "a9scu": {
+                "name": "a9scu", 
+                "pio": {
+                    "peer": "system.membus.master[4]", 
+                    "role": "SLAVE"
+                }, 
+                "pio_latency": 1.0000000000000001e-07, 
+                "eventq_index": 0, 
+                "cxx_class": "A9SCU", 
+                "path": "system.realview.a9scu", 
+                "pio_addr": 520093696, 
+                "type": "A9SCU"
+            }, 
+            "flash_fake": {
+                "ret_data8": 255, 
+                "name": "flash_fake", 
+                "pio": {
+                    "peer": "system.iobus.master[24]", 
+                    "role": "SLAVE"
+                }, 
+                "ret_bad_addr": false, 
+                "pio_latency": 1.0000000000000001e-07, 
+                "fake_mem": true, 
+                "pio_size": 536870912, 
+                "ret_data32": 4294967295, 
+                "eventq_index": 0, 
+                "update_data": false, 
+                "ret_data64": 18446744073709551615, 
+                "cxx_class": "IsaFake", 
+                "path": "system.realview.flash_fake", 
+                "pio_addr": 1073741824, 
+                "type": "IsaFake", 
+                "ret_data16": 65535
+            }, 
+            "watchdog_fake": {
+                "name": "watchdog_fake", 
+                "pio": {
+                    "peer": "system.iobus.master[15]", 
+                    "role": "SLAVE"
+                }, 
+                "amba_id": 0, 
+                "ignore_access": false, 
+                "pio_latency": 1.0000000000000001e-07, 
+                "eventq_index": 0, 
+                "cxx_class": "AmbaFake", 
+                "path": "system.realview.watchdog_fake", 
+                "pio_addr": 268500992, 
+                "type": "AmbaFake"
+            }, 
+            "cxx_class": "RealView", 
+            "uart3_fake": {
+                "name": "uart3_fake", 
+                "pio": {
+                    "peer": "system.iobus.master[12]", 
+                    "role": "SLAVE"
+                }, 
+                "amba_id": 0, 
+                "ignore_access": false, 
+                "pio_latency": 1.0000000000000001e-07, 
+                "eventq_index": 0, 
+                "cxx_class": "AmbaFake", 
+                "path": "system.realview.uart3_fake", 
+                "pio_addr": 268484608, 
+                "type": "AmbaFake"
+            }, 
+            "mem_start_addr": 0, 
+            "realview_io": {
+                "proc_id1": 201327138, 
+                "name": "realview_io", 
+                "pio": {
+                    "peer": "system.iobus.master[1]", 
+                    "role": "SLAVE"
+                }, 
+                "pio_latency": 1.0000000000000001e-07, 
+                "eventq_index": 0, 
+                "cxx_class": "RealViewCtrl", 
+                "proc_id0": 201326592, 
+                "path": "system.realview.realview_io", 
+                "idreg": 0, 
+                "type": "RealViewCtrl", 
+                "pio_addr": 268435456
+            }, 
+            "l2x0_fake": {
+                "ret_data8": 255, 
+                "name": "l2x0_fake", 
+                "pio": {
+                    "peer": "system.membus.master[3]", 
+                    "role": "SLAVE"
+                }, 
+                "ret_bad_addr": false, 
+                "pio_latency": 1.0000000000000001e-07, 
+                "fake_mem": false, 
+                "pio_size": 4095, 
+                "ret_data32": 4294967295, 
+                "eventq_index": 0, 
+                "update_data": false, 
+                "ret_data64": 18446744073709551615, 
+                "cxx_class": "IsaFake", 
+                "path": "system.realview.l2x0_fake", 
+                "pio_addr": 520101888, 
+                "type": "IsaFake", 
+                "ret_data16": 65535
+            }, 
+            "uart1_fake": {
+                "name": "uart1_fake", 
+                "pio": {
+                    "peer": "system.iobus.master[10]", 
+                    "role": "SLAVE"
+                }, 
+                "amba_id": 0, 
+                "ignore_access": false, 
+                "pio_latency": 1.0000000000000001e-07, 
+                "eventq_index": 0, 
+                "cxx_class": "AmbaFake", 
+                "path": "system.realview.uart1_fake", 
+                "pio_addr": 268476416, 
+                "type": "AmbaFake"
+            }, 
+            "gpio1_fake": {
+                "name": "gpio1_fake", 
+                "pio": {
+                    "peer": "system.iobus.master[17]", 
+                    "role": "SLAVE"
+                }, 
+                "amba_id": 0, 
+                "ignore_access": false, 
+                "pio_latency": 1.0000000000000001e-07, 
+                "eventq_index": 0, 
+                "cxx_class": "AmbaFake", 
+                "path": "system.realview.gpio1_fake", 
+                "pio_addr": 268517376, 
+                "type": "AmbaFake"
+            }, 
+            "dmac_fake": {
+                "name": "dmac_fake", 
+                "pio": {
+                    "peer": "system.iobus.master[9]", 
+                    "role": "SLAVE"
+                }, 
+                "amba_id": 0, 
+                "ignore_access": false, 
+                "pio_latency": 1.0000000000000001e-07, 
+                "eventq_index": 0, 
+                "cxx_class": "AmbaFake", 
+                "path": "system.realview.dmac_fake", 
+                "pio_addr": 268632064, 
+                "type": "AmbaFake"
+            }, 
+            "cf_ctrl": {
+                "PMCAPNextCapability": 0, 
+                "InterruptPin": 1, 
+                "HeaderType": 0, 
+                "VendorID": 32902, 
+                "MSIXMsgCtrl": 0, 
+                "MSIXCAPNextCapability": 0, 
+                "PXCAPLinkCtrl": 0, 
+                "Revision": 0, 
+                "pio_latency": 3.0000000000000004e-08, 
+                "PXCAPLinkCap": 0, 
+                "CapabilityPtr": 0, 
+                "MSIXCAPBaseOffset": 0, 
+                "PXCAPDevCapabilities": 0, 
+                "MSIXCAPCapId": 0, 
+                "BAR3Size": 4, 
+                "PXCAPCapabilities": 0, 
+                "SubsystemID": 0, 
+                "PXCAPCapId": 0, 
+                "BAR4": 1, 
+                "BAR1": 402653440, 
+                "BAR0": 402653184, 
+                "BAR3": 1, 
+                "BAR2": 1, 
+                "BAR5": 1, 
+                "PXCAPDevStatus": 0, 
+                "BAR2Size": 8, 
+                "MSICAPNextCapability": 0, 
+                "ExpansionROM": 0, 
+                "MSICAPMsgCtrl": 0, 
+                "BAR5Size": 0, 
+                "CardbusCIS": 0, 
+                "MSIXPbaOffset": 0, 
+                "MSICAPBaseOffset": 0, 
+                "MaximumLatency": 0, 
+                "BAR2LegacyIO": false, 
+                "LatencyTimer": 0, 
+                "BAR4LegacyIO": false, 
+                "PXCAPLinkStatus": 0, 
+                "PXCAPDevCap2": 0, 
+                "PXCAPDevCtrl": 0, 
+                "MSICAPMaskBits": 0, 
+                "Command": 1, 
+                "SubClassCode": 1, 
+                "pci_func": 0, 
+                "BAR5LegacyIO": false, 
+                "MSICAPMsgData": 0, 
+                "BIST": 0, 
+                "PXCAPDevCtrl2": 0, 
+                "pci_bus": 2, 
+                "InterruptLine": 31, 
+                "MSICAPMsgAddr": 0, 
+                "BAR3LegacyIO": false, 
+                "BAR4Size": 16, 
+                "path": "system.realview.cf_ctrl", 
+                "MinimumGrant": 0, 
+                "Status": 640, 
+                "BAR0Size": 16, 
+                "name": "cf_ctrl", 
+                "PXCAPNextCapability": 0, 
+                "eventq_index": 0, 
+                "type": "IdeController", 
+                "ctrl_offset": 2, 
+                "PXCAPBaseOffset": 0, 
+                "DeviceID": 28945, 
+                "io_shift": 1, 
+                "CacheLineSize": 0, 
+                "dma": {
+                    "peer": "system.iobus.slave[2]", 
+                    "role": "MASTER"
+                }, 
+                "PMCAPCapId": 0, 
+                "config_latency": 2e-08, 
+                "BAR1Size": 1, 
+                "pio": {
+                    "peer": "system.iobus.master[7]", 
+                    "role": "SLAVE"
+                }, 
+                "pci_dev": 7, 
+                "PMCAPCtrlStatus": 0, 
+                "cxx_class": "IdeController", 
+                "SubsystemVendorID": 0, 
+                "PMCAPBaseOffset": 0, 
+                "config": {
+                    "peer": "system.iobus.master[8]", 
+                    "role": "SLAVE"
+                }, 
+                "MSICAPPendingBits": 0, 
+                "MSIXTableOffset": 0, 
+                "MSICAPMsgUpperAddr": 0, 
+                "MSICAPCapId": 0, 
+                "BAR0LegacyIO": true, 
+                "ProgIF": 133, 
+                "BAR1LegacyIO": true, 
+                "PMCAPCapabilities": 0, 
+                "ClassCode": 1
+            }, 
+            "local_cpu_timer": {
+                "int_num_watchdog": 30, 
+                "name": "local_cpu_timer", 
+                "pio": {
+                    "peer": "system.membus.master[5]", 
+                    "role": "SLAVE"
+                }, 
+                "cxx_class": "CpuLocalTimer", 
+                "pio_latency": 1.0000000000000001e-07, 
+                "eventq_index": 0, 
+                "int_num_timer": 29, 
+                "path": "system.realview.local_cpu_timer", 
+                "pio_addr": 520095232, 
+                "type": "CpuLocalTimer"
+            }, 
+            "max_mem_size": 268435456, 
+            "gic": {
+                "it_lines": 128, 
+                "name": "gic", 
+                "dist_addr": 520097792, 
+                "cpu_pio_delay": 1e-08, 
+                "dist_pio_delay": 1e-08, 
+                "cpu_addr": 520093952, 
+                "int_latency": 1e-08, 
+                "eventq_index": 0, 
+                "msix_addr": 0, 
+                "cxx_class": "Pl390", 
+                "pio": {
+                    "peer": "system.membus.master[2]", 
+                    "role": "SLAVE"
+                }, 
+                "path": "system.realview.gic", 
+                "type": "Pl390"
+            }, 
+            "timer1": {
+                "name": "timer1", 
+                "pio": {
+                    "peer": "system.iobus.master[3]", 
+                    "role": "SLAVE"
+                }, 
+                "amba_id": 1316868, 
+                "pio_latency": 1.0000000000000001e-07, 
+                "clock0": 1e-06, 
+                "clock1": 1e-06, 
+                "eventq_index": 0, 
+                "cxx_class": "Sp804", 
+                "path": "system.realview.timer1", 
+                "int_num0": 37, 
+                "int_num1": 37, 
+                "type": "Sp804", 
+                "pio_addr": 268509184
+            }, 
+            "timer0": {
+                "name": "timer0", 
+                "pio": {
+                    "peer": "system.iobus.master[2]", 
+                    "role": "SLAVE"
+                }, 
+                "amba_id": 1316868, 
+                "pio_latency": 1.0000000000000001e-07, 
+                "clock0": 1e-06, 
+                "clock1": 1e-06, 
+                "eventq_index": 0, 
+                "cxx_class": "Sp804", 
+                "path": "system.realview.timer0", 
+                "int_num0": 36, 
+                "int_num1": 36, 
+                "type": "Sp804", 
+                "pio_addr": 268505088
+            }, 
+            "uart2_fake": {
+                "name": "uart2_fake", 
+                "pio": {
+                    "peer": "system.iobus.master[11]", 
+                    "role": "SLAVE"
+                }, 
+                "amba_id": 0, 
+                "ignore_access": false, 
+                "pio_latency": 1.0000000000000001e-07, 
+                "eventq_index": 0, 
+                "cxx_class": "AmbaFake", 
+                "path": "system.realview.uart2_fake", 
+                "pio_addr": 268480512, 
+                "type": "AmbaFake"
+            }, 
+            "eventq_index": 0, 
+            "type": "RealView", 
+            "gpio2_fake": {
+                "name": "gpio2_fake", 
+                "pio": {
+                    "peer": "system.iobus.master[18]", 
+                    "role": "SLAVE"
+                }, 
+                "amba_id": 0, 
+                "ignore_access": false, 
+                "pio_latency": 1.0000000000000001e-07, 
+                "eventq_index": 0, 
+                "cxx_class": "AmbaFake", 
+                "path": "system.realview.gpio2_fake", 
+                "pio_addr": 268521472, 
+                "type": "AmbaFake"
+            }, 
+            "aaci_fake": {
+                "name": "aaci_fake", 
+                "pio": {
+                    "peer": "system.iobus.master[21]", 
+                    "role": "SLAVE"
+                }, 
+                "amba_id": 0, 
+                "ignore_access": false, 
+                "pio_latency": 1.0000000000000001e-07, 
+                "eventq_index": 0, 
+                "cxx_class": "AmbaFake", 
+                "path": "system.realview.aaci_fake", 
+                "pio_addr": 268451840, 
+                "type": "AmbaFake"
+            }, 
+            "pci_cfg_base": 0, 
+            "path": "system.realview", 
+            "ssp_fake": {
+                "name": "ssp_fake", 
+                "pio": {
+                    "peer": "system.iobus.master[19]", 
+                    "role": "SLAVE"
+                }, 
+                "amba_id": 0, 
+                "ignore_access": false, 
+                "pio_latency": 1.0000000000000001e-07, 
+                "eventq_index": 0, 
+                "cxx_class": "AmbaFake", 
+                "path": "system.realview.ssp_fake", 
+                "pio_addr": 268488704, 
+                "type": "AmbaFake"
+            }, 
+            "gpio0_fake": {
+                "name": "gpio0_fake", 
+                "pio": {
+                    "peer": "system.iobus.master[16]", 
+                    "role": "SLAVE"
+                }, 
+                "amba_id": 0, 
+                "ignore_access": false, 
+                "pio_latency": 1.0000000000000001e-07, 
+                "eventq_index": 0, 
+                "cxx_class": "AmbaFake", 
+                "path": "system.realview.gpio0_fake", 
+                "pio_addr": 268513280, 
+                "type": "AmbaFake"
+            }, 
+            "nvmem": {
+                "latency": 3.0000000000000004e-08, 
+                "name": "nvmem", 
+                "eventq_index": 0, 
+                "latency_var": 0.0, 
+                "conf_table_reported": false, 
+                "cxx_class": "SimpleMemory", 
+                "path": "system.realview.nvmem", 
+                "null": false, 
+                "type": "SimpleMemory", 
+                "port": {
+                    "peer": "system.membus.master[1]", 
+                    "role": "SLAVE"
+                }, 
+                "in_addr_map": true
+            }, 
+            "clcd": {
+                "dma": {
+                    "peer": "system.iobus.slave[1]", 
+                    "role": "MASTER"
+                }, 
+                "pixel_clock": 4.166666666666667e-08, 
+                "name": "clcd", 
+                "pio": {
+                    "peer": "system.iobus.master[4]", 
+                    "role": "SLAVE"
+                }, 
+                "amba_id": 1315089, 
+                "pio_latency": 1e-08, 
+                "int_num": 55, 
+                "eventq_index": 0, 
+                "cxx_class": "Pl111", 
+                "enable_capture": true, 
+                "path": "system.realview.clcd", 
+                "pio_addr": 268566528, 
+                "type": "Pl111"
+            }, 
+            "name": "realview", 
+            "uart": {
+                "name": "uart", 
+                "int_delay": 1.0000000000000001e-07, 
+                "pio": {
+                    "peer": "system.iobus.master[0]", 
+                    "role": "SLAVE"
+                }, 
+                "pio_latency": 1.0000000000000001e-07, 
+                "int_num": 44, 
+                "eventq_index": 0, 
+                "end_on_eot": false, 
+                "cxx_class": "Pl011", 
+                "path": "system.realview.uart", 
+                "pio_addr": 268472320, 
+                "type": "Pl011"
+            }, 
+            "kmi1": {
+                "name": "kmi1", 
+                "int_delay": 1e-06, 
+                "pio": {
+                    "peer": "system.iobus.master[6]", 
+                    "role": "SLAVE"
+                }, 
+                "amba_id": 1314896, 
+                "pio_latency": 1.0000000000000001e-07, 
+                "int_num": 53, 
+                "eventq_index": 0, 
+                "is_mouse": true, 
+                "cxx_class": "Pl050", 
+                "path": "system.realview.kmi1", 
+                "pio_addr": 268464128, 
+                "type": "Pl050"
+            }, 
+            "kmi0": {
+                "name": "kmi0", 
+                "int_delay": 1e-06, 
+                "pio": {
+                    "peer": "system.iobus.master[5]", 
+                    "role": "SLAVE"
+                }, 
+                "amba_id": 1314896, 
+                "pio_latency": 1.0000000000000001e-07, 
+                "int_num": 52, 
+                "eventq_index": 0, 
+                "is_mouse": false, 
+                "cxx_class": "Pl050", 
+                "path": "system.realview.kmi0", 
+                "pio_addr": 268460032, 
+                "type": "Pl050"
+            }, 
+            "smc_fake": {
+                "name": "smc_fake", 
+                "pio": {
+                    "peer": "system.iobus.master[13]", 
+                    "role": "SLAVE"
+                }, 
+                "amba_id": 0, 
+                "ignore_access": false, 
+                "pio_latency": 1.0000000000000001e-07, 
+                "eventq_index": 0, 
+                "cxx_class": "AmbaFake", 
+                "path": "system.realview.smc_fake", 
+                "pio_addr": 269357056, 
+                "type": "AmbaFake"
+            }, 
+            "sp810_fake": {
+                "name": "sp810_fake", 
+                "pio": {
+                    "peer": "system.iobus.master[14]", 
+                    "role": "SLAVE"
+                }, 
+                "amba_id": 0, 
+                "ignore_access": true, 
+                "pio_latency": 1.0000000000000001e-07, 
+                "eventq_index": 0, 
+                "cxx_class": "AmbaFake", 
+                "path": "system.realview.sp810_fake", 
+                "pio_addr": 268439552, 
+                "type": "AmbaFake"
+            }, 
+            "sci_fake": {
+                "name": "sci_fake", 
+                "pio": {
+                    "peer": "system.iobus.master[20]", 
+                    "role": "SLAVE"
+                }, 
+                "amba_id": 0, 
+                "ignore_access": false, 
+                "pio_latency": 1.0000000000000001e-07, 
+                "eventq_index": 0, 
+                "cxx_class": "AmbaFake", 
+                "path": "system.realview.sci_fake", 
+                "pio_addr": 268492800, 
+                "type": "AmbaFake"
+            }
+        }, 
+        "membus": {
+            "slave": {
+                "peer": [
+                    "system.system_port", 
+                    "system.iocache.mem_side", 
+                    "system.l2.mem_side"
+                ], 
+                "role": "SLAVE"
+            }, 
+            "name": "membus", 
+            "badaddr_responder": {
+                "ret_data8": 255, 
+                "name": "badaddr_responder", 
+                "pio": {
+                    "peer": "system.membus.default", 
+                    "role": "SLAVE"
+                }, 
+                "ret_bad_addr": true, 
+                "pio_latency": 1.0000000000000001e-07, 
+                "fake_mem": false, 
+                "pio_size": 8, 
+                "ret_data32": 4294967295, 
+                "eventq_index": 0, 
+                "update_data": false, 
+                "ret_data64": 18446744073709551615, 
+                "cxx_class": "IsaFake", 
+                "path": "system.membus.badaddr_responder", 
+                "pio_addr": 0, 
+                "type": "IsaFake", 
+                "ret_data16": 65535
+            }, 
+            "default": {
+                "peer": "system.membus.badaddr_responder.pio", 
+                "role": "MASTER"
+            }, 
+            "header_cycles": 1, 
+            "width": 8, 
+            "eventq_index": 0, 
+            "master": {
+                "peer": [
+                    "system.bridge.slave", 
+                    "system.realview.nvmem.port", 
+                    "system.realview.gic.pio", 
+                    "system.realview.l2x0_fake.pio", 
+                    "system.realview.a9scu.pio", 
+                    "system.realview.local_cpu_timer.pio", 
+                    "system.mem_ctrls.port"
+                ], 
+                "role": "MASTER"
+            }, 
+            "cxx_class": "CoherentBus", 
+            "path": "system.membus", 
+            "type": "CoherentBus", 
+            "use_default_range": false
+        }, 
+        "panic_on_panic": false, 
+        "eventq_index": 0, 
+        "iocache": {
+            "assoc": 8, 
+            "mem_side": {
+                "peer": "system.membus.slave[1]", 
+                "role": "MASTER"
+            }, 
+            "cpu_side": {
+                "peer": "system.iobus.master[25]", 
+                "role": "SLAVE"
+            }, 
+            "name": "iocache", 
+            "tags": {
+                "name": "tags", 
+                "eventq_index": 0, 
+                "hit_latency": 50, 
+                "sequential_access": false, 
+                "assoc": 8, 
+                "cxx_class": "LRU", 
+                "path": "system.iocache.tags", 
+                "block_size": 64, 
+                "type": "LRU", 
+                "size": 1024
+            }, 
+            "hit_latency": 50, 
+            "mshrs": 20, 
+            "response_latency": 50, 
+            "is_top_level": true, 
+            "tgts_per_mshr": 12, 
+            "sequential_access": false, 
+            "max_miss_count": 0, 
+            "eventq_index": 0, 
+            "prefetch_on_access": false, 
+            "cxx_class": "BaseCache", 
+            "path": "system.iocache", 
+            "write_buffers": 8, 
+            "two_queue": false, 
+            "type": "BaseCache", 
+            "forward_snoops": false, 
+            "size": 1024
+        }, 
+        "tol2bus": {
+            "slave": {
+                "peer": [
+                    "system.cpu0.icache.mem_side", 
+                    "system.cpu0.dcache.mem_side", 
+                    "system.cpu0.itb.walker.port", 
+                    "system.cpu0.dtb.walker.port", 
+                    "system.cpu0.istage2_mmu.stage2_tlb.walker.port", 
+                    "system.cpu0.dstage2_mmu.stage2_tlb.walker.port", 
+                    "system.cpu1.icache.mem_side", 
+                    "system.cpu1.dcache.mem_side", 
+                    "system.cpu1.itb.walker.port", 
+                    "system.cpu1.dtb.walker.port", 
+                    "system.cpu1.istage2_mmu.stage2_tlb.walker.port", 
+                    "system.cpu1.dstage2_mmu.stage2_tlb.walker.port", 
+                    "system.cpu2.icache.mem_side", 
+                    "system.cpu2.dcache.mem_side", 
+                    "system.cpu2.itb.walker.port", 
+                    "system.cpu2.dtb.walker.port", 
+                    "system.cpu2.istage2_mmu.stage2_tlb.walker.port", 
+                    "system.cpu2.dstage2_mmu.stage2_tlb.walker.port", 
+                    "system.cpu3.icache.mem_side", 
+                    "system.cpu3.dcache.mem_side", 
+                    "system.cpu3.itb.walker.port", 
+                    "system.cpu3.dtb.walker.port", 
+                    "system.cpu3.istage2_mmu.stage2_tlb.walker.port", 
+                    "system.cpu3.dstage2_mmu.stage2_tlb.walker.port"
+                ], 
+                "role": "SLAVE"
+            }, 
+            "name": "tol2bus", 
+            "header_cycles": 1, 
+            "width": 32, 
+            "eventq_index": 0, 
+            "master": {
+                "peer": [
+                    "system.l2.cpu_side"
+                ], 
+                "role": "MASTER"
+            }, 
+            "cxx_class": "CoherentBus", 
+            "path": "system.tol2bus", 
+            "type": "CoherentBus", 
+            "use_default_range": false
+        }, 
+        "work_end_exit_count": 0, 
+        "type": "LinuxArmSystem", 
+        "voltage_domain": {
+            "eventq_index": 0, 
+            "path": "system.voltage_domain", 
+            "type": "VoltageDomain", 
+            "name": "voltage_domain", 
+            "cxx_class": "VoltageDomain"
+        }, 
+        "cache_line_size": 64, 
+        "cpu_voltage_domain": {
+            "eventq_index": 0, 
+            "path": "system.cpu_voltage_domain", 
+            "type": "VoltageDomain", 
+            "name": "cpu_voltage_domain", 
+            "cxx_class": "VoltageDomain"
+        }, 
+        "iobus": {
+            "slave": {
+                "peer": [
+                    "system.bridge.master", 
+                    "system.realview.clcd.dma", 
+                    "system.realview.cf_ctrl.dma"
+                ], 
+                "role": "SLAVE"
+            }, 
+            "name": "iobus", 
+            "header_cycles": 1, 
+            "width": 8, 
+            "eventq_index": 0, 
+            "master": {
+                "peer": [
+                    "system.realview.uart.pio", 
+                    "system.realview.realview_io.pio", 
+                    "system.realview.timer0.pio", 
+                    "system.realview.timer1.pio", 
+                    "system.realview.clcd.pio", 
+                    "system.realview.kmi0.pio", 
+                    "system.realview.kmi1.pio", 
+                    "system.realview.cf_ctrl.pio", 
+                    "system.realview.cf_ctrl.config", 
+                    "system.realview.dmac_fake.pio", 
+                    "system.realview.uart1_fake.pio", 
+                    "system.realview.uart2_fake.pio", 
+                    "system.realview.uart3_fake.pio", 
+                    "system.realview.smc_fake.pio", 
+                    "system.realview.sp810_fake.pio", 
+                    "system.realview.watchdog_fake.pio", 
+                    "system.realview.gpio0_fake.pio", 
+                    "system.realview.gpio1_fake.pio", 
+                    "system.realview.gpio2_fake.pio", 
+                    "system.realview.ssp_fake.pio", 
+                    "system.realview.sci_fake.pio", 
+                    "system.realview.aaci_fake.pio", 
+                    "system.realview.mmc_fake.pio", 
+                    "system.realview.rtc.pio", 
+                    "system.realview.flash_fake.pio", 
+                    "system.iocache.cpu_side"
+                ], 
+                "role": "MASTER"
+            }, 
+            "cxx_class": "NoncoherentBus", 
+            "path": "system.iobus", 
+            "type": "NoncoherentBus", 
+            "use_default_range": false
+        }, 
+        "terminal": {
+            "name": "terminal", 
+            "output": true, 
+            "number": 0, 
+            "eventq_index": 0, 
+            "cxx_class": "Terminal", 
+            "path": "system.terminal", 
+            "type": "Terminal", 
+            "port": 3456
+        }, 
+        "reset_addr_64": 0, 
+        "gic_cpu_addr": 520093952, 
+        "work_cpus_ckpt_count": 0, 
+        "work_begin_exit_count": 0, 
+        "machine_type": "RealView_PBX", 
+        "flags_addr": 268435504, 
+        "path": "system", 
+        "cpu_clk_domain": {
+            "name": "cpu_clk_domain", 
+            "clock": 5e-10, 
+            "eventq_index": 0, 
+            "cxx_class": "SrcClockDomain", 
+            "path": "system.cpu_clk_domain", 
+            "type": "SrcClockDomain"
+        }, 
+        "cf0": {
+            "driveID": "master", 
+            "name": "cf0", 
+            "image": {
+                "read_only": false, 
+                "name": "image", 
+                "child": {
+                    "read_only": true, 
+                    "name": "child", 
+                    "eventq_index": 0, 
+                    "cxx_class": "RawDiskImage", 
+                    "path": "system.cf0.image.child", 
+                    "type": "RawDiskImage"
+                }, 
+                "eventq_index": 0, 
+                "cxx_class": "CowDiskImage", 
+                "path": "system.cf0.image", 
+                "table_size": 65536, 
+                "type": "CowDiskImage"
+            }, 
+            "delay": 1e-06, 
+            "eventq_index": 0, 
+            "cxx_class": "IdeDisk", 
+            "path": "system.cf0", 
+            "type": "IdeDisk"
+        }, 
+        "name": "system", 
+        "mem_mode": "timing", 
+        "boot_release_addr": 65528, 
+        "init_param": 0, 
+        "system_port": {
+            "peer": "system.membus.slave[0]", 
+            "role": "MASTER"
+        }, 
+        "load_addr_mask": 268435455, 
+        "cpu": [
+            {
+                "do_statistics_insts": true, 
+                "numThreads": 1, 
+                "itb": {
+                    "name": "itb", 
+                    "is_stage2": false, 
+                    "eventq_index": 0, 
+                    "cxx_class": "ArmISA::TLB", 
+                    "walker": {
+                        "name": "walker", 
+                        "is_stage2": false, 
+                        "eventq_index": 0, 
+                        "cxx_class": "ArmISA::TableWalker", 
+                        "path": "system.cpu0.itb.walker", 
+                        "type": "ArmTableWalker", 
+                        "port": {
+                            "peer": "system.tol2bus.slave[2]", 
+                            "role": "MASTER"
+                        }, 
+                        "num_squash_per_cycle": 2
+                    }, 
+                    "path": "system.cpu0.itb", 
+                    "type": "ArmTLB", 
+                    "size": 64
+                }, 
+                "istage2_mmu": {
+                    "name": "istage2_mmu", 
+                    "stage2_tlb": {
+                        "name": "stage2_tlb", 
+                        "is_stage2": true, 
+                        "eventq_index": 0, 
+                        "cxx_class": "ArmISA::TLB", 
+                        "walker": {
+                            "name": "walker", 
+                            "is_stage2": true, 
+                            "eventq_index": 0, 
+                            "cxx_class": "ArmISA::TableWalker", 
+                            "path": "system.cpu0.istage2_mmu.stage2_tlb.walker", 
+                            "type": "ArmTableWalker", 
+                            "port": {
+                                "peer": "system.tol2bus.slave[4]", 
+                                "role": "MASTER"
+                            }, 
+                            "num_squash_per_cycle": 2
+                        }, 
+                        "path": "system.cpu0.istage2_mmu.stage2_tlb", 
+                        "type": "ArmTLB", 
+                        "size": 32
+                    }, 
+                    "eventq_index": 0, 
+                    "cxx_class": "ArmISA::Stage2MMU", 
+                    "path": "system.cpu0.istage2_mmu", 
+                    "type": "ArmStage2MMU"
+                }, 
+                "dcache": {
+                    "assoc": 2, 
+                    "mem_side": {
+                        "peer": "system.tol2bus.slave[1]", 
+                        "role": "MASTER"
+                    }, 
+                    "cpu_side": {
+                        "peer": "system.cpu0.dcache_port", 
+                        "role": "SLAVE"
+                    }, 
+                    "name": "dcache", 
+                    "tags": {
+                        "name": "tags", 
+                        "eventq_index": 0, 
+                        "hit_latency": 2, 
+                        "sequential_access": false, 
+                        "assoc": 2, 
+                        "cxx_class": "LRU", 
+                        "path": "system.cpu0.dcache.tags", 
+                        "block_size": 64, 
+                        "type": "LRU", 
+                        "size": 16384
+                    }, 
+                    "hit_latency": 2, 
+                    "mshrs": 4, 
+                    "response_latency": 2, 
+                    "is_top_level": true, 
+                    "tgts_per_mshr": 20, 
+                    "sequential_access": false, 
+                    "max_miss_count": 0, 
+                    "eventq_index": 0, 
+                    "prefetch_on_access": false, 
+                    "cxx_class": "BaseCache", 
+                    "path": "system.cpu0.dcache", 
+                    "write_buffers": 8, 
+                    "two_queue": false, 
+                    "type": "BaseCache", 
+                    "forward_snoops": true, 
+                    "size": 16384
+                }, 
+                "do_checkpoint_insts": true, 
+                "cxx_class": "TimingSimpleCPU", 
+                "max_loads_all_threads": 0, 
+                "function_trace_start": 0, 
+                "cpu_id": 0, 
+                "eventq_index": 0, 
+                "do_quiesce": true, 
+                "type": "TimingSimpleCPU", 
+                "profile": 0.0, 
+                "icache_port": {
+                    "peer": "system.cpu0.icache.cpu_side", 
+                    "role": "MASTER"
+                }, 
+                "icache": {
+                    "assoc": 2, 
+                    "mem_side": {
+                        "peer": "system.tol2bus.slave[0]", 
+                        "role": "MASTER"
+                    }, 
+                    "cpu_side": {
+                        "peer": "system.cpu0.icache_port", 
+                        "role": "SLAVE"
+                    }, 
+                    "name": "icache", 
+                    "tags": {
+                        "name": "tags", 
+                        "eventq_index": 0, 
+                        "hit_latency": 2, 
+                        "sequential_access": false, 
+                        "assoc": 2, 
+                        "cxx_class": "LRU", 
+                        "path": "system.cpu0.icache.tags", 
+                        "block_size": 64, 
+                        "type": "LRU", 
+                        "size": 16384
+                    }, 
+                    "hit_latency": 2, 
+                    "mshrs": 4, 
+                    "response_latency": 2, 
+                    "is_top_level": true, 
+                    "tgts_per_mshr": 20, 
+                    "sequential_access": false, 
+                    "max_miss_count": 0, 
+                    "eventq_index": 0, 
+                    "prefetch_on_access": false, 
+                    "cxx_class": "BaseCache", 
+                    "path": "system.cpu0.icache", 
+                    "write_buffers": 8, 
+                    "two_queue": false, 
+                    "type": "BaseCache", 
+                    "forward_snoops": true, 
+                    "size": 16384
+                }, 
+                "interrupts": {
+                    "eventq_index": 0, 
+                    "path": "system.cpu0.interrupts", 
+                    "type": "ArmInterrupts", 
+                    "name": "interrupts", 
+                    "cxx_class": "ArmISA::Interrupts"
+                }, 
+                "socket_id": 0, 
+                "max_insts_all_threads": 0, 
+                "dstage2_mmu": {
+                    "name": "dstage2_mmu", 
+                    "stage2_tlb": {
+                        "name": "stage2_tlb", 
+                        "is_stage2": true, 
+                        "eventq_index": 0, 
+                        "cxx_class": "ArmISA::TLB", 
+                        "walker": {
+                            "name": "walker", 
+                            "is_stage2": true, 
+                            "eventq_index": 0, 
+                            "cxx_class": "ArmISA::TableWalker", 
+                            "path": "system.cpu0.dstage2_mmu.stage2_tlb.walker", 
+                            "type": "ArmTableWalker", 
+                            "port": {
+                                "peer": "system.tol2bus.slave[5]", 
+                                "role": "MASTER"
+                            }, 
+                            "num_squash_per_cycle": 2
+                        }, 
+                        "path": "system.cpu0.dstage2_mmu.stage2_tlb", 
+                        "type": "ArmTLB", 
+                        "size": 32
+                    }, 
+                    "eventq_index": 0, 
+                    "cxx_class": "ArmISA::Stage2MMU", 
+                    "path": "system.cpu0.dstage2_mmu", 
+                    "type": "ArmStage2MMU"
+                }, 
+                "path": "system.cpu0", 
+                "isa": [
+                    {
+                        "id_pfr1": 4113, 
+                        "id_pfr0": 49, 
+                        "id_isar1": 34677009, 
+                        "id_isar0": 34607377, 
+                        "id_isar3": 17899825, 
+                        "id_isar2": 555950401, 
+                        "id_isar5": 0, 
+                        "id_isar4": 268501314, 
+                        "cxx_class": "ArmISA::ISA", 
+                        "id_aa64mmfr1_el1": 0, 
+                        "id_aa64pfr1_el1": 0, 
+                        "eventq_index": 0, 
+                        "type": "ArmISA", 
+                        "id_aa64dfr1_el1": 0, 
+                        "fpsid": 1090793632, 
+                        "id_mmfr0": 270536963, 
+                        "id_mmfr1": 0, 
+                        "id_mmfr2": 19070976, 
+                        "id_mmfr3": 34611729, 
+                        "id_aa64mmfr0_el1": 15728642, 
+                        "id_aa64dfr0_el1": 1052678, 
+                        "path": "system.cpu0.isa", 
+                        "id_aa64isar0_el1": 0, 
+                        "name": "isa", 
+                        "midr": 1091551472, 
+                        "id_aa64afr0_el1": 0, 
+                        "id_aa64isar1_el1": 0, 
+                        "id_aa64afr1_el1": 0, 
+                        "id_aa64pfr0_el1": 17
+                    }
+                ], 
+                "switched_out": false, 
+                "name": "cpu0", 
+                "dtb": {
+                    "name": "dtb", 
+                    "is_stage2": false, 
+                    "eventq_index": 0, 
+                    "cxx_class": "ArmISA::TLB", 
+                    "walker": {
+                        "name": "walker", 
+                        "is_stage2": false, 
+                        "eventq_index": 0, 
+                        "cxx_class": "ArmISA::TableWalker", 
+                        "path": "system.cpu0.dtb.walker", 
+                        "type": "ArmTableWalker", 
+                        "port": {
+                            "peer": "system.tol2bus.slave[3]", 
+                            "role": "MASTER"
+                        }, 
+                        "num_squash_per_cycle": 2
+                    }, 
+                    "path": "system.cpu0.dtb", 
+                    "type": "ArmTLB", 
+                    "size": 64
+                }, 
+                "max_insts_any_thread": 0, 
+                "progress_interval": 0.0, 
+                "dcache_port": {
+                    "peer": "system.cpu0.dcache.cpu_side", 
+                    "role": "MASTER"
+                }, 
+                "function_trace": false, 
+                "max_loads_any_thread": 0, 
+                "tracer": {
+                    "eventq_index": 0, 
+                    "path": "system.cpu0.tracer", 
+                    "type": "ExeTracer", 
+                    "name": "tracer", 
+                    "cxx_class": "Trace::ExeTracer"
+                }
+            }, 
+            {
+                "do_statistics_insts": true, 
+                "numThreads": 1, 
+                "itb": {
+                    "name": "itb", 
+                    "is_stage2": false, 
+                    "eventq_index": 0, 
+                    "cxx_class": "ArmISA::TLB", 
+                    "walker": {
+                        "name": "walker", 
+                        "is_stage2": false, 
+                        "eventq_index": 0, 
+                        "cxx_class": "ArmISA::TableWalker", 
+                        "path": "system.cpu1.itb.walker", 
+                        "type": "ArmTableWalker", 
+                        "port": {
+                            "peer": "system.tol2bus.slave[8]", 
+                            "role": "MASTER"
+                        }, 
+                        "num_squash_per_cycle": 2
+                    }, 
+                    "path": "system.cpu1.itb", 
+                    "type": "ArmTLB", 
+                    "size": 64
+                }, 
+                "istage2_mmu": {
+                    "name": "istage2_mmu", 
+                    "stage2_tlb": {
+                        "name": "stage2_tlb", 
+                        "is_stage2": true, 
+                        "eventq_index": 0, 
+                        "cxx_class": "ArmISA::TLB", 
+                        "walker": {
+                            "name": "walker", 
+                            "is_stage2": true, 
+                            "eventq_index": 0, 
+                            "cxx_class": "ArmISA::TableWalker", 
+                            "path": "system.cpu1.istage2_mmu.stage2_tlb.walker", 
+                            "type": "ArmTableWalker", 
+                            "port": {
+                                "peer": "system.tol2bus.slave[10]", 
+                                "role": "MASTER"
+                            }, 
+                            "num_squash_per_cycle": 2
+                        }, 
+                        "path": "system.cpu1.istage2_mmu.stage2_tlb", 
+                        "type": "ArmTLB", 
+                        "size": 32
+                    }, 
+                    "eventq_index": 0, 
+                    "cxx_class": "ArmISA::Stage2MMU", 
+                    "path": "system.cpu1.istage2_mmu", 
+                    "type": "ArmStage2MMU"
+                }, 
+                "dcache": {
+                    "assoc": 2, 
+                    "mem_side": {
+                        "peer": "system.tol2bus.slave[7]", 
+                        "role": "MASTER"
+                    }, 
+                    "cpu_side": {
+                        "peer": "system.cpu1.dcache_port", 
+                        "role": "SLAVE"
+                    }, 
+                    "name": "dcache", 
+                    "tags": {
+                        "name": "tags", 
+                        "eventq_index": 0, 
+                        "hit_latency": 2, 
+                        "sequential_access": false, 
+                        "assoc": 2, 
+                        "cxx_class": "LRU", 
+                        "path": "system.cpu1.dcache.tags", 
+                        "block_size": 64, 
+                        "type": "LRU", 
+                        "size": 16384
+                    }, 
+                    "hit_latency": 2, 
+                    "mshrs": 4, 
+                    "response_latency": 2, 
+                    "is_top_level": true, 
+                    "tgts_per_mshr": 20, 
+                    "sequential_access": false, 
+                    "max_miss_count": 0, 
+                    "eventq_index": 0, 
+                    "prefetch_on_access": false, 
+                    "cxx_class": "BaseCache", 
+                    "path": "system.cpu1.dcache", 
+                    "write_buffers": 8, 
+                    "two_queue": false, 
+                    "type": "BaseCache", 
+                    "forward_snoops": true, 
+                    "size": 16384
+                }, 
+                "do_checkpoint_insts": true, 
+                "cxx_class": "TimingSimpleCPU", 
+                "max_loads_all_threads": 0, 
+                "function_trace_start": 0, 
+                "cpu_id": 1, 
+                "eventq_index": 0, 
+                "do_quiesce": true, 
+                "type": "TimingSimpleCPU", 
+                "profile": 0.0, 
+                "icache_port": {
+                    "peer": "system.cpu1.icache.cpu_side", 
+                    "role": "MASTER"
+                }, 
+                "icache": {
+                    "assoc": 2, 
+                    "mem_side": {
+                        "peer": "system.tol2bus.slave[6]", 
+                        "role": "MASTER"
+                    }, 
+                    "cpu_side": {
+                        "peer": "system.cpu1.icache_port", 
+                        "role": "SLAVE"
+                    }, 
+                    "name": "icache", 
+                    "tags": {
+                        "name": "tags", 
+                        "eventq_index": 0, 
+                        "hit_latency": 2, 
+                        "sequential_access": false, 
+                        "assoc": 2, 
+                        "cxx_class": "LRU", 
+                        "path": "system.cpu1.icache.tags", 
+                        "block_size": 64, 
+                        "type": "LRU", 
+                        "size": 16384
+                    }, 
+                    "hit_latency": 2, 
+                    "mshrs": 4, 
+                    "response_latency": 2, 
+                    "is_top_level": true, 
+                    "tgts_per_mshr": 20, 
+                    "sequential_access": false, 
+                    "max_miss_count": 0, 
+                    "eventq_index": 0, 
+                    "prefetch_on_access": false, 
+                    "cxx_class": "BaseCache", 
+                    "path": "system.cpu1.icache", 
+                    "write_buffers": 8, 
+                    "two_queue": false, 
+                    "type": "BaseCache", 
+                    "forward_snoops": true, 
+                    "size": 16384
+                }, 
+                "interrupts": {
+                    "eventq_index": 0, 
+                    "path": "system.cpu1.interrupts", 
+                    "type": "ArmInterrupts", 
+                    "name": "interrupts", 
+                    "cxx_class": "ArmISA::Interrupts"
+                }, 
+                "socket_id": 0, 
+                "max_insts_all_threads": 0, 
+                "dstage2_mmu": {
+                    "name": "dstage2_mmu", 
+                    "stage2_tlb": {
+                        "name": "stage2_tlb", 
+                        "is_stage2": true, 
+                        "eventq_index": 0, 
+                        "cxx_class": "ArmISA::TLB", 
+                        "walker": {
+                            "name": "walker", 
+                            "is_stage2": true, 
+                            "eventq_index": 0, 
+                            "cxx_class": "ArmISA::TableWalker", 
+                            "path": "system.cpu1.dstage2_mmu.stage2_tlb.walker", 
+                            "type": "ArmTableWalker", 
+                            "port": {
+                                "peer": "system.tol2bus.slave[11]", 
+                                "role": "MASTER"
+                            }, 
+                            "num_squash_per_cycle": 2
+                        }, 
+                        "path": "system.cpu1.dstage2_mmu.stage2_tlb", 
+                        "type": "ArmTLB", 
+                        "size": 32
+                    }, 
+                    "eventq_index": 0, 
+                    "cxx_class": "ArmISA::Stage2MMU", 
+                    "path": "system.cpu1.dstage2_mmu", 
+                    "type": "ArmStage2MMU"
+                }, 
+                "path": "system.cpu1", 
+                "isa": [
+                    {
+                        "id_pfr1": 4113, 
+                        "id_pfr0": 49, 
+                        "id_isar1": 34677009, 
+                        "id_isar0": 34607377, 
+                        "id_isar3": 17899825, 
+                        "id_isar2": 555950401, 
+                        "id_isar5": 0, 
+                        "id_isar4": 268501314, 
+                        "cxx_class": "ArmISA::ISA", 
+                        "id_aa64mmfr1_el1": 0, 
+                        "id_aa64pfr1_el1": 0, 
+                        "eventq_index": 0, 
+                        "type": "ArmISA", 
+                        "id_aa64dfr1_el1": 0, 
+                        "fpsid": 1090793632, 
+                        "id_mmfr0": 270536963, 
+                        "id_mmfr1": 0, 
+                        "id_mmfr2": 19070976, 
+                        "id_mmfr3": 34611729, 
+                        "id_aa64mmfr0_el1": 15728642, 
+                        "id_aa64dfr0_el1": 1052678, 
+                        "path": "system.cpu1.isa", 
+                        "id_aa64isar0_el1": 0, 
+                        "name": "isa", 
+                        "midr": 1091551472, 
+                        "id_aa64afr0_el1": 0, 
+                        "id_aa64isar1_el1": 0, 
+                        "id_aa64afr1_el1": 0, 
+                        "id_aa64pfr0_el1": 17
+                    }
+                ], 
+                "switched_out": false, 
+                "name": "cpu1", 
+                "dtb": {
+                    "name": "dtb", 
+                    "is_stage2": false, 
+                    "eventq_index": 0, 
+                    "cxx_class": "ArmISA::TLB", 
+                    "walker": {
+                        "name": "walker", 
+                        "is_stage2": false, 
+                        "eventq_index": 0, 
+                        "cxx_class": "ArmISA::TableWalker", 
+                        "path": "system.cpu1.dtb.walker", 
+                        "type": "ArmTableWalker", 
+                        "port": {
+                            "peer": "system.tol2bus.slave[9]", 
+                            "role": "MASTER"
+                        }, 
+                        "num_squash_per_cycle": 2
+                    }, 
+                    "path": "system.cpu1.dtb", 
+                    "type": "ArmTLB", 
+                    "size": 64
+                }, 
+                "max_insts_any_thread": 0, 
+                "progress_interval": 0.0, 
+                "dcache_port": {
+                    "peer": "system.cpu1.dcache.cpu_side", 
+                    "role": "MASTER"
+                }, 
+                "function_trace": false, 
+                "max_loads_any_thread": 0, 
+                "tracer": {
+                    "eventq_index": 0, 
+                    "path": "system.cpu1.tracer", 
+                    "type": "ExeTracer", 
+                    "name": "tracer", 
+                    "cxx_class": "Trace::ExeTracer"
+                }
+            }, 
+            {
+                "do_statistics_insts": true, 
+                "numThreads": 1, 
+                "itb": {
+                    "name": "itb", 
+                    "is_stage2": false, 
+                    "eventq_index": 0, 
+                    "cxx_class": "ArmISA::TLB", 
+                    "walker": {
+                        "name": "walker", 
+                        "is_stage2": false, 
+                        "eventq_index": 0, 
+                        "cxx_class": "ArmISA::TableWalker", 
+                        "path": "system.cpu2.itb.walker", 
+                        "type": "ArmTableWalker", 
+                        "port": {
+                            "peer": "system.tol2bus.slave[14]", 
+                            "role": "MASTER"
+                        }, 
+                        "num_squash_per_cycle": 2
+                    }, 
+                    "path": "system.cpu2.itb", 
+                    "type": "ArmTLB", 
+                    "size": 64
+                }, 
+                "istage2_mmu": {
+                    "name": "istage2_mmu", 
+                    "stage2_tlb": {
+                        "name": "stage2_tlb", 
+                        "is_stage2": true, 
+                        "eventq_index": 0, 
+                        "cxx_class": "ArmISA::TLB", 
+                        "walker": {
+                            "name": "walker", 
+                            "is_stage2": true, 
+                            "eventq_index": 0, 
+                            "cxx_class": "ArmISA::TableWalker", 
+                            "path": "system.cpu2.istage2_mmu.stage2_tlb.walker", 
+                            "type": "ArmTableWalker", 
+                            "port": {
+                                "peer": "system.tol2bus.slave[16]", 
+                                "role": "MASTER"
+                            }, 
+                            "num_squash_per_cycle": 2
+                        }, 
+                        "path": "system.cpu2.istage2_mmu.stage2_tlb", 
+                        "type": "ArmTLB", 
+                        "size": 32
+                    }, 
+                    "eventq_index": 0, 
+                    "cxx_class": "ArmISA::Stage2MMU", 
+                    "path": "system.cpu2.istage2_mmu", 
+                    "type": "ArmStage2MMU"
+                }, 
+                "dcache": {
+                    "assoc": 2, 
+                    "mem_side": {
+                        "peer": "system.tol2bus.slave[13]", 
+                        "role": "MASTER"
+                    }, 
+                    "cpu_side": {
+                        "peer": "system.cpu2.dcache_port", 
+                        "role": "SLAVE"
+                    }, 
+                    "name": "dcache", 
+                    "tags": {
+                        "name": "tags", 
+                        "eventq_index": 0, 
+                        "hit_latency": 2, 
+                        "sequential_access": false, 
+                        "assoc": 2, 
+                        "cxx_class": "LRU", 
+                        "path": "system.cpu2.dcache.tags", 
+                        "block_size": 64, 
+                        "type": "LRU", 
+                        "size": 16384
+                    }, 
+                    "hit_latency": 2, 
+                    "mshrs": 4, 
+                    "response_latency": 2, 
+                    "is_top_level": true, 
+                    "tgts_per_mshr": 20, 
+                    "sequential_access": false, 
+                    "max_miss_count": 0, 
+                    "eventq_index": 0, 
+                    "prefetch_on_access": false, 
+                    "cxx_class": "BaseCache", 
+                    "path": "system.cpu2.dcache", 
+                    "write_buffers": 8, 
+                    "two_queue": false, 
+                    "type": "BaseCache", 
+                    "forward_snoops": true, 
+                    "size": 16384
+                }, 
+                "do_checkpoint_insts": true, 
+                "cxx_class": "TimingSimpleCPU", 
+                "max_loads_all_threads": 0, 
+                "function_trace_start": 0, 
+                "cpu_id": 2, 
+                "eventq_index": 0, 
+                "do_quiesce": true, 
+                "type": "TimingSimpleCPU", 
+                "profile": 0.0, 
+                "icache_port": {
+                    "peer": "system.cpu2.icache.cpu_side", 
+                    "role": "MASTER"
+                }, 
+                "icache": {
+                    "assoc": 2, 
+                    "mem_side": {
+                        "peer": "system.tol2bus.slave[12]", 
+                        "role": "MASTER"
+                    }, 
+                    "cpu_side": {
+                        "peer": "system.cpu2.icache_port", 
+                        "role": "SLAVE"
+                    }, 
+                    "name": "icache", 
+                    "tags": {
+                        "name": "tags", 
+                        "eventq_index": 0, 
+                        "hit_latency": 2, 
+                        "sequential_access": false, 
+                        "assoc": 2, 
+                        "cxx_class": "LRU", 
+                        "path": "system.cpu2.icache.tags", 
+                        "block_size": 64, 
+                        "type": "LRU", 
+                        "size": 16384
+                    }, 
+                    "hit_latency": 2, 
+                    "mshrs": 4, 
+                    "response_latency": 2, 
+                    "is_top_level": true, 
+                    "tgts_per_mshr": 20, 
+                    "sequential_access": false, 
+                    "max_miss_count": 0, 
+                    "eventq_index": 0, 
+                    "prefetch_on_access": false, 
+                    "cxx_class": "BaseCache", 
+                    "path": "system.cpu2.icache", 
+                    "write_buffers": 8, 
+                    "two_queue": false, 
+                    "type": "BaseCache", 
+                    "forward_snoops": true, 
+                    "size": 16384
+                }, 
+                "interrupts": {
+                    "eventq_index": 0, 
+                    "path": "system.cpu2.interrupts", 
+                    "type": "ArmInterrupts", 
+                    "name": "interrupts", 
+                    "cxx_class": "ArmISA::Interrupts"
+                }, 
+                "socket_id": 0, 
+                "max_insts_all_threads": 0, 
+                "dstage2_mmu": {
+                    "name": "dstage2_mmu", 
+                    "stage2_tlb": {
+                        "name": "stage2_tlb", 
+                        "is_stage2": true, 
+                        "eventq_index": 0, 
+                        "cxx_class": "ArmISA::TLB", 
+                        "walker": {
+                            "name": "walker", 
+                            "is_stage2": true, 
+                            "eventq_index": 0, 
+                            "cxx_class": "ArmISA::TableWalker", 
+                            "path": "system.cpu2.dstage2_mmu.stage2_tlb.walker", 
+                            "type": "ArmTableWalker", 
+                            "port": {
+                                "peer": "system.tol2bus.slave[17]", 
+                                "role": "MASTER"
+                            }, 
+                            "num_squash_per_cycle": 2
+                        }, 
+                        "path": "system.cpu2.dstage2_mmu.stage2_tlb", 
+                        "type": "ArmTLB", 
+                        "size": 32
+                    }, 
+                    "eventq_index": 0, 
+                    "cxx_class": "ArmISA::Stage2MMU", 
+                    "path": "system.cpu2.dstage2_mmu", 
+                    "type": "ArmStage2MMU"
+                }, 
+                "path": "system.cpu2", 
+                "isa": [
+                    {
+                        "id_pfr1": 4113, 
+                        "id_pfr0": 49, 
+                        "id_isar1": 34677009, 
+                        "id_isar0": 34607377, 
+                        "id_isar3": 17899825, 
+                        "id_isar2": 555950401, 
+                        "id_isar5": 0, 
+                        "id_isar4": 268501314, 
+                        "cxx_class": "ArmISA::ISA", 
+                        "id_aa64mmfr1_el1": 0, 
+                        "id_aa64pfr1_el1": 0, 
+                        "eventq_index": 0, 
+                        "type": "ArmISA", 
+                        "id_aa64dfr1_el1": 0, 
+                        "fpsid": 1090793632, 
+                        "id_mmfr0": 270536963, 
+                        "id_mmfr1": 0, 
+                        "id_mmfr2": 19070976, 
+                        "id_mmfr3": 34611729, 
+                        "id_aa64mmfr0_el1": 15728642, 
+                        "id_aa64dfr0_el1": 1052678, 
+                        "path": "system.cpu2.isa", 
+                        "id_aa64isar0_el1": 0, 
+                        "name": "isa", 
+                        "midr": 1091551472, 
+                        "id_aa64afr0_el1": 0, 
+                        "id_aa64isar1_el1": 0, 
+                        "id_aa64afr1_el1": 0, 
+                        "id_aa64pfr0_el1": 17
+                    }
+                ], 
+                "switched_out": false, 
+                "name": "cpu2", 
+                "dtb": {
+                    "name": "dtb", 
+                    "is_stage2": false, 
+                    "eventq_index": 0, 
+                    "cxx_class": "ArmISA::TLB", 
+                    "walker": {
+                        "name": "walker", 
+                        "is_stage2": false, 
+                        "eventq_index": 0, 
+                        "cxx_class": "ArmISA::TableWalker", 
+                        "path": "system.cpu2.dtb.walker", 
+                        "type": "ArmTableWalker", 
+                        "port": {
+                            "peer": "system.tol2bus.slave[15]", 
+                            "role": "MASTER"
+                        }, 
+                        "num_squash_per_cycle": 2
+                    }, 
+                    "path": "system.cpu2.dtb", 
+                    "type": "ArmTLB", 
+                    "size": 64
+                }, 
+                "max_insts_any_thread": 0, 
+                "progress_interval": 0.0, 
+                "dcache_port": {
+                    "peer": "system.cpu2.dcache.cpu_side", 
+                    "role": "MASTER"
+                }, 
+                "function_trace": false, 
+                "max_loads_any_thread": 0, 
+                "tracer": {
+                    "eventq_index": 0, 
+                    "path": "system.cpu2.tracer", 
+                    "type": "ExeTracer", 
+                    "name": "tracer", 
+                    "cxx_class": "Trace::ExeTracer"
+                }
+            }, 
+            {
+                "do_statistics_insts": true, 
+                "numThreads": 1, 
+                "itb": {
+                    "name": "itb", 
+                    "is_stage2": false, 
+                    "eventq_index": 0, 
+                    "cxx_class": "ArmISA::TLB", 
+                    "walker": {
+                        "name": "walker", 
+                        "is_stage2": false, 
+                        "eventq_index": 0, 
+                        "cxx_class": "ArmISA::TableWalker", 
+                        "path": "system.cpu3.itb.walker", 
+                        "type": "ArmTableWalker", 
+                        "port": {
+                            "peer": "system.tol2bus.slave[20]", 
+                            "role": "MASTER"
+                        }, 
+                        "num_squash_per_cycle": 2
+                    }, 
+                    "path": "system.cpu3.itb", 
+                    "type": "ArmTLB", 
+                    "size": 64
+                }, 
+                "istage2_mmu": {
+                    "name": "istage2_mmu", 
+                    "stage2_tlb": {
+                        "name": "stage2_tlb", 
+                        "is_stage2": true, 
+                        "eventq_index": 0, 
+                        "cxx_class": "ArmISA::TLB", 
+                        "walker": {
+                            "name": "walker", 
+                            "is_stage2": true, 
+                            "eventq_index": 0, 
+                            "cxx_class": "ArmISA::TableWalker", 
+                            "path": "system.cpu3.istage2_mmu.stage2_tlb.walker", 
+                            "type": "ArmTableWalker", 
+                            "port": {
+                                "peer": "system.tol2bus.slave[22]", 
+                                "role": "MASTER"
+                            }, 
+                            "num_squash_per_cycle": 2
+                        }, 
+                        "path": "system.cpu3.istage2_mmu.stage2_tlb", 
+                        "type": "ArmTLB", 
+                        "size": 32
+                    }, 
+                    "eventq_index": 0, 
+                    "cxx_class": "ArmISA::Stage2MMU", 
+                    "path": "system.cpu3.istage2_mmu", 
+                    "type": "ArmStage2MMU"
+                }, 
+                "dcache": {
+                    "assoc": 2, 
+                    "mem_side": {
+                        "peer": "system.tol2bus.slave[19]", 
+                        "role": "MASTER"
+                    }, 
+                    "cpu_side": {
+                        "peer": "system.cpu3.dcache_port", 
+                        "role": "SLAVE"
+                    }, 
+                    "name": "dcache", 
+                    "tags": {
+                        "name": "tags", 
+                        "eventq_index": 0, 
+                        "hit_latency": 2, 
+                        "sequential_access": false, 
+                        "assoc": 2, 
+                        "cxx_class": "LRU", 
+                        "path": "system.cpu3.dcache.tags", 
+                        "block_size": 64, 
+                        "type": "LRU", 
+                        "size": 16384
+                    }, 
+                    "hit_latency": 2, 
+                    "mshrs": 4, 
+                    "response_latency": 2, 
+                    "is_top_level": true, 
+                    "tgts_per_mshr": 20, 
+                    "sequential_access": false, 
+                    "max_miss_count": 0, 
+                    "eventq_index": 0, 
+                    "prefetch_on_access": false, 
+                    "cxx_class": "BaseCache", 
+                    "path": "system.cpu3.dcache", 
+                    "write_buffers": 8, 
+                    "two_queue": false, 
+                    "type": "BaseCache", 
+                    "forward_snoops": true, 
+                    "size": 16384
+                }, 
+                "do_checkpoint_insts": true, 
+                "cxx_class": "TimingSimpleCPU", 
+                "max_loads_all_threads": 0, 
+                "function_trace_start": 0, 
+                "cpu_id": 3, 
+                "eventq_index": 0, 
+                "do_quiesce": true, 
+                "type": "TimingSimpleCPU", 
+                "profile": 0.0, 
+                "icache_port": {
+                    "peer": "system.cpu3.icache.cpu_side", 
+                    "role": "MASTER"
+                }, 
+                "icache": {
+                    "assoc": 2, 
+                    "mem_side": {
+                        "peer": "system.tol2bus.slave[18]", 
+                        "role": "MASTER"
+                    }, 
+                    "cpu_side": {
+                        "peer": "system.cpu3.icache_port", 
+                        "role": "SLAVE"
+                    }, 
+                    "name": "icache", 
+                    "tags": {
+                        "name": "tags", 
+                        "eventq_index": 0, 
+                        "hit_latency": 2, 
+                        "sequential_access": false, 
+                        "assoc": 2, 
+                        "cxx_class": "LRU", 
+                        "path": "system.cpu3.icache.tags", 
+                        "block_size": 64, 
+                        "type": "LRU", 
+                        "size": 16384
+                    }, 
+                    "hit_latency": 2, 
+                    "mshrs": 4, 
+                    "response_latency": 2, 
+                    "is_top_level": true, 
+                    "tgts_per_mshr": 20, 
+                    "sequential_access": false, 
+                    "max_miss_count": 0, 
+                    "eventq_index": 0, 
+                    "prefetch_on_access": false, 
+                    "cxx_class": "BaseCache", 
+                    "path": "system.cpu3.icache", 
+                    "write_buffers": 8, 
+                    "two_queue": false, 
+                    "type": "BaseCache", 
+                    "forward_snoops": true, 
+                    "size": 16384
+                }, 
+                "interrupts": {
+                    "eventq_index": 0, 
+                    "path": "system.cpu3.interrupts", 
+                    "type": "ArmInterrupts", 
+                    "name": "interrupts", 
+                    "cxx_class": "ArmISA::Interrupts"
+                }, 
+                "socket_id": 0, 
+                "max_insts_all_threads": 0, 
+                "dstage2_mmu": {
+                    "name": "dstage2_mmu", 
+                    "stage2_tlb": {
+                        "name": "stage2_tlb", 
+                        "is_stage2": true, 
+                        "eventq_index": 0, 
+                        "cxx_class": "ArmISA::TLB", 
+                        "walker": {
+                            "name": "walker", 
+                            "is_stage2": true, 
+                            "eventq_index": 0, 
+                            "cxx_class": "ArmISA::TableWalker", 
+                            "path": "system.cpu3.dstage2_mmu.stage2_tlb.walker", 
+                            "type": "ArmTableWalker", 
+                            "port": {
+                                "peer": "system.tol2bus.slave[23]", 
+                                "role": "MASTER"
+                            }, 
+                            "num_squash_per_cycle": 2
+                        }, 
+                        "path": "system.cpu3.dstage2_mmu.stage2_tlb", 
+                        "type": "ArmTLB", 
+                        "size": 32
+                    }, 
+                    "eventq_index": 0, 
+                    "cxx_class": "ArmISA::Stage2MMU", 
+                    "path": "system.cpu3.dstage2_mmu", 
+                    "type": "ArmStage2MMU"
+                }, 
+                "path": "system.cpu3", 
+                "isa": [
+                    {
+                        "id_pfr1": 4113, 
+                        "id_pfr0": 49, 
+                        "id_isar1": 34677009, 
+                        "id_isar0": 34607377, 
+                        "id_isar3": 17899825, 
+                        "id_isar2": 555950401, 
+                        "id_isar5": 0, 
+                        "id_isar4": 268501314, 
+                        "cxx_class": "ArmISA::ISA", 
+                        "id_aa64mmfr1_el1": 0, 
+                        "id_aa64pfr1_el1": 0, 
+                        "eventq_index": 0, 
+                        "type": "ArmISA", 
+                        "id_aa64dfr1_el1": 0, 
+                        "fpsid": 1090793632, 
+                        "id_mmfr0": 270536963, 
+                        "id_mmfr1": 0, 
+                        "id_mmfr2": 19070976, 
+                        "id_mmfr3": 34611729, 
+                        "id_aa64mmfr0_el1": 15728642, 
+                        "id_aa64dfr0_el1": 1052678, 
+                        "path": "system.cpu3.isa", 
+                        "id_aa64isar0_el1": 0, 
+                        "name": "isa", 
+                        "midr": 1091551472, 
+                        "id_aa64afr0_el1": 0, 
+                        "id_aa64isar1_el1": 0, 
+                        "id_aa64afr1_el1": 0, 
+                        "id_aa64pfr0_el1": 17
+                    }
+                ], 
+                "switched_out": false, 
+                "name": "cpu3", 
+                "dtb": {
+                    "name": "dtb", 
+                    "is_stage2": false, 
+                    "eventq_index": 0, 
+                    "cxx_class": "ArmISA::TLB", 
+                    "walker": {
+                        "name": "walker", 
+                        "is_stage2": false, 
+                        "eventq_index": 0, 
+                        "cxx_class": "ArmISA::TableWalker", 
+                        "path": "system.cpu3.dtb.walker", 
+                        "type": "ArmTableWalker", 
+                        "port": {
+                            "peer": "system.tol2bus.slave[21]", 
+                            "role": "MASTER"
+                        }, 
+                        "num_squash_per_cycle": 2
+                    }, 
+                    "path": "system.cpu3.dtb", 
+                    "type": "ArmTLB", 
+                    "size": 64
+                }, 
+                "max_insts_any_thread": 0, 
+                "progress_interval": 0.0, 
+                "dcache_port": {
+                    "peer": "system.cpu3.dcache.cpu_side", 
+                    "role": "MASTER"
+                }, 
+                "function_trace": false, 
+                "max_loads_any_thread": 0, 
+                "tracer": {
+                    "eventq_index": 0, 
+                    "path": "system.cpu3.tracer", 
+                    "type": "ExeTracer", 
+                    "name": "tracer", 
+                    "cxx_class": "Trace::ExeTracer"
+                }
+            }
+        ], 
+        "intrctrl": {
+            "eventq_index": 0, 
+            "path": "system.intrctrl", 
+            "type": "IntrControl", 
+            "name": "intrctrl", 
+            "cxx_class": "IntrControl"
+        }, 
+        "have_security": false, 
+        "l2": {
+            "assoc": 2, 
+            "mem_side": {
+                "peer": "system.membus.slave[2]", 
+                "role": "MASTER"
+            }, 
+            "cpu_side": {
+                "peer": "system.tol2bus.master[0]", 
+                "role": "SLAVE"
+            }, 
+            "name": "l2", 
+            "tags": {
+                "name": "tags", 
+                "eventq_index": 0, 
+                "hit_latency": 20, 
+                "sequential_access": false, 
+                "assoc": 2, 
+                "cxx_class": "LRU", 
+                "path": "system.l2.tags", 
+                "block_size": 64, 
+                "type": "LRU", 
+                "size": 524288
+            }, 
+            "hit_latency": 20, 
+            "mshrs": 20, 
+            "response_latency": 20, 
+            "is_top_level": false, 
+            "tgts_per_mshr": 12, 
+            "sequential_access": false, 
+            "max_miss_count": 0, 
+            "eventq_index": 0, 
+            "prefetch_on_access": false, 
+            "cxx_class": "BaseCache", 
+            "path": "system.l2", 
+            "write_buffers": 8, 
+            "two_queue": false, 
+            "type": "BaseCache", 
+            "forward_snoops": true, 
+            "size": 524288
+        }, 
+        "atags_addr": 256, 
+        "mem_ctrls": [
+            {
+                "static_frontend_latency": 1e-08, 
+                "tRFC": 2.6e-07, 
+                "activation_limit": 4, 
+                "tWTR": 7.500000000000001e-09, 
+                "write_low_thresh_perc": 50, 
+                "channels": 1, 
+                "write_buffer_size": 64, 
+                "device_bus_width": 8, 
+                "write_high_thresh_perc": 85, 
+                "cxx_class": "DRAMCtrl", 
+                "null": false, 
+                "port": {
+                    "peer": "system.membus.master[6]", 
+                    "role": "SLAVE"
+                }, 
+                "in_addr_map": true, 
+                "tRRD": 6.000000000000001e-09, 
+                "tRTW": 2.5e-09, 
+                "max_accesses_per_row": 16, 
+                "burst_length": 8, 
+                "tRTP": 7.500000000000001e-09, 
+                "tWR": 1.5000000000000002e-08, 
+                "eventq_index": 0, 
+                "static_backend_latency": 1e-08, 
+                "banks_per_rank": 8, 
+                "addr_mapping": "RoRaBaChCo", 
+                "tRCD": 1.375e-08, 
+                "type": "DRAMCtrl", 
+                "min_writes_per_switch": 16, 
+                "ranks_per_channel": 2, 
+                "page_policy": "open_adaptive", 
+                "tCL": 1.375e-08, 
+                "read_buffer_size": 32, 
+                "conf_table_reported": true, 
+                "tCK": 1.25e-09, 
+                "tRAS": 3.5e-08, 
+                "tBURST": 5e-09, 
+                "path": "system.mem_ctrls", 
+                "devices_per_rank": 8, 
+                "name": "mem_ctrls", 
+                "tXAW": 3.0000000000000004e-08, 
+                "tREFI": 7.8e-06, 
+                "mem_sched_policy": "frfcfs", 
+                "tRP": 1.375e-08, 
+                "device_rowbuffer_size": 1024
+            }
+        ], 
+        "work_begin_cpu_id_exit": -1, 
+        "work_item_id": -1, 
+        "num_work_ids": 16
+    }, 
+    "time_sync_period": 0.1, 
+    "eventq_index": 0, 
+    "time_sync_spin_threshold": 9.999999999999999e-05, 
+    "cxx_class": "Root", 
+    "path": "root", 
+    "time_sync_enable": false, 
+    "type": "Root", 
+    "full_system": true
+}

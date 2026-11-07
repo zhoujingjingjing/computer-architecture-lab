@@ -1,0 +1,39 @@
+#!/bin/sh
+
+if [ $# != 1 ] && [ $# != 2 ] 
+then
+  echo "Usage $0 <source> [disk-image]"
+fi
+
+M5HOME=/home/cristinel/hw4/gem5
+DISK=${M5HOME}/full_system_images_ALPHA/disks/linux-parsec-2-1-m5-with-test-inputs.img
+MPOINT=/mnt/fs_disk
+
+if [ $# = 2 ]
+then
+  if [ -f $2 ]
+  then
+    DISK=$2
+  else
+    echo "Warning: \"$2\" not found, using default\"${DISK}\""
+  fi
+fi
+
+#initial (old) version
+#sudo mount -o loop,offset=32256 ${DISK} ${MPOINT}
+#sudo mkdir -p ${MPOINT}/benchmarks
+#sudo cp -r $1 ${MPOINT}/benchmarks/
+#sleep 0.8
+#sudo umount ${MPOINT}
+
+# new version:
+FIRST_AVAIL_LOOP_DEV=`sudo losetup -f`
+echo "FIRST_AVAIL_LOOP_DEV: \"${FIRST_AVAIL_LOOP_DEV}\""
+sudo mkdir -p ${MPOINT}/benchmarks
+sudo losetup ${FIRST_AVAIL_LOOP_DEV} ${DISK}
+sudo mount -o loop,offset=32256 ${FIRST_AVAIL_LOOP_DEV} ${MPOINT}
+sudo cp -r $1 ${MPOINT}/benchmarks/
+sleep 0.8
+sudo umount ${MPOINT}
+sudo losetup -d ${FIRST_AVAIL_LOOP_DEV}
+sudo rm -rf ${MPOINT}
