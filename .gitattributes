@@ -20,3 +20,5 @@
 /pdf/onur-comparch-fall2025-lecture7-memory-dataretention-and-refresh-afterlecture.pdf filter=lfs diff=lfs merge=lfs -text
 /pdf/onur-comparch-fall2025-lecture9a-memorylatency-ii-afterlecture.pdf filter=lfs diff=lfs merge=lfs -text
 /pdf/onur-comparch-fall2025-lecture9b-memorycontrollers-afterlecture.pdf filter=lfs diff=lfs merge=lfs -text
+*.pdf filter=lfs diff=lfs merge=lfs -text
+*.trace filter=lfs diff=lfs merge=lfs -text
